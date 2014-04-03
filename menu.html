@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Uitklapmenu</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	
+	<body>
+	
+		<ul id="b" onclick="Search()"><li>Zoekmachine</li></ul>	
+			<ul id="a">
+			  <li id="d"><a href="http://www.google.com/">Google</a></li>
+			  <li id="d"><a href="http://www.bing.com/">Bing</a></li>
+			  <li id="d"><a href="http://www.Yahoo.com/">Yahoo</a></li>
+			</ul>
+
+		<ul id="d" onclick="News()"><li>Nieuws</li></ul>		
+			<ul id="c">
+			  <li id="c"><a href="http://www.Nieuws.nl/">Nieuws.nl</a></li>
+			  <li id="c"><a href="http://www.Nu.nl/">Nu.nl</a></li>
+			</ul>
+		
+		<script>
+		var element = document.getElementById('a');
+		element.style.display = 'none';
+		
+		function Search() 
+		{
+			if(element.style.display === 'none')
+			{
+				element.style.display = 'block';
+			}
+			else
+			{
+				element.style.display = 'none'; 
+			}
+		}
+		
+		var element2 = document.getElementById('c');
+		element2.style.display = 'none';
+		
+		function News() 
+		{
+			if(element2.style.display === 'none')
+			{
+				element2.style.display = 'block';
+			}
+			else
+			{
+				element2.style.display = 'none'; 
+			}
+		}
+		
+		
+		</script>
+		
+	</body>
+</html>

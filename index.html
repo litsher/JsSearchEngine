@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Keuzes</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="header">
+
+			<h1> Keuzes </h1>
+
+	
+			  <p>
+				<label>Keuze 1: </label>
+				<input type="text" id="keuze1" onBlur="Submit ('keuze1')" />
+			  </p>
+			  
+			  <p>
+				<label>Keuze 2: </label>
+				<input type="text" id="keuze2" onBlur="Submit ('keuze2')" />
+			  </p>
+
+			  <p>
+				<label>Keuze 3: </label>
+				<input type="text" id="keuze3" onBlur="Submit ('keuze3')" />
+			  </p>
+			  <div class="plaatje1" id="plaatje1"></div>
+			  <div class="plaatje2" id="plaatje2"></div>
+			  <div class="plaatje3" id="plaatje3"></div>
+			  
+		</div>
+		<script>
+			function Submit(keuze)
+				{
+				var keuzeWaarde = document.getElementById(keuze).value;
+				
+				switch(keuze)
+				{
+				case "keuze1" :
+				var plaatje1 = document.getElementById('plaatje1');
+				plaatje1.innerHTML = '<img src="'+ keuzeWaarde +'.jpg">'
+				+ '\n<p><a target="_blank" href="http://nl.wikipedia.org/wiki/'+ keuzeWaarde +'"> '
+				+ ' Lees er meer over op de wiki</a></p>' ;
+				break;
+				case "keuze2" :
+				var plaatje2 = document.getElementById('plaatje2');
+				plaatje2.innerHTML = '<img src="'+ keuzeWaarde +'.jpg">'
+				+ '\n<p><a target="_blank" href="http://nl.wikipedia.org/wiki/'+ keuzeWaarde +'"> '
+				+ ' Lees er meer over op de wiki</a></p>' ;
+				break;
+				case "keuze3" :
+				var plaatje3 = document.getElementById('plaatje3');
+				plaatje3.innerHTML = '<img src="'+ keuzeWaarde +'.jpg">'
+				+ '\n<p><a target="_blank" href="http://nl.wikipedia.org/wiki/'+ keuzeWaarde +'"> '
+				+ ' Lees er meer over op de wiki</a></p>' ;
+				break;
+				}
+				}
+		</script>
+	</body>	
+</html>
